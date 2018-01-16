@@ -3,29 +3,36 @@ package Bubble;
 
 
 public class BubbleSort{
+	
+	
     public static void main(String[] args){
-        int score[] = {66, 79, 55, 87, 99,200, 89, 99, 100};
-        for (int i = 0; i < score.length -1; i++){    //×î¶à×ön-1ÌËÅÅÐò
-            for(int j = 0 ;j < score.length - i - 1; j++){    
-            	if(score[j] < score[j + 1]){    //°ÑÐ¡µÄÖµ½»»»µ½ºóÃæ
-                    int temp = score[j];
-                    score[j] = score[j + 1];
-                    score[j + 1] = temp;
-                }
-            }            
-            
-            
-            System.out.print("µÚ" + (i + 1) + "´ÎÅÅÐò½á¹û£º");
-            for(int a = 0; a < score.length; a++){
-                System.out.print(score[a] + "\t");
-            }
-            
-            System.out.println("");
-        }
-        
-            System.out.print("×îÖÕÅÅÐò½á¹û£º");
-            for(int a = 0; a < score.length; a++){
-                System.out.print(score[a] + "\t");
-       }
+    	int da[]={49,38,65,97,76,13,27,49,78,34,12,64,5,4,62,99,98};  
+    	 System.out.println("æŽ’åºä¹‹å‰ï¼š");
+    	 BubbleSort.output(da);
+    	 System.out.println();
+    	  
+    	 System.out.println("æŽ’åºä¹‹åŽï¼š");
+    	 BubbleSort.bubble(da);
+    	 BubbleSort.output(da);
     }
+    
+	public static  void bubble(int[] a){	
+	    int temp=0;  
+	    for(int i=0;i<a.length-1;i++){  
+	        for(int j=0;j<a.length-1-i;j++){  
+	        if(a[j]>a[j+1]){  
+	            temp=a[j];  
+	            a[j]=a[j+1];  
+	            a[j+1]=temp;  
+	          }  
+	        }  
+	    }  	  
+	}
+	
+	  public static void output(int[] a){
+	        for(int i=0;i<a.length;i++){
+	                System.out.print(a[i]+"\t");
+	            }
+	        }
+
 }
